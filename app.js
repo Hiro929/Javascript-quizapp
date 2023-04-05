@@ -12,13 +12,13 @@ const buttonLength = $button.length;
 
 // クイズの問題文、選択肢を定義
 const setupQuiz = () => {
-  document.getElementById('js-question').textContent = question;
-  let buttonIndex = 0;
+    document.getElementById('js-question').textContent = question;
+    let buttonIndex = 0;
 
-  while (buttonIndex < buttonLength){
-    $button[buttonIndex].textContent = answers[buttonIndex]
-    buttonIndex++;
-  }
+    while (buttonIndex < buttonLength) {
+        $button[buttonIndex].textContent = answers[buttonIndex]
+        buttonIndex++;
+    }
 }
 setupQuiz();
 
@@ -32,7 +32,7 @@ const clickHandler = (e) => {
 
 // ボタンをクリックしたら正誤判定
 let handlerIndex = 0;
-while (handlerIndex < buttonLength){
+while (handlerIndex < buttonLength) {
     $button[handlerIndex].addEventListener('click', (e) => {
         clickHandler(e);
     });
